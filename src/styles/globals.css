@@ -1,16 +1,49 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color Palette */
+:root {
+  --purple-900: #635fc7;
+  --purple-800: #a8a4ff;
+  --purple-700: #D8D7F1;
+  --purple-600: #F0EFFA
+  --red: #ea5555;
+  --light-red: #ff9898;
+  --black-900: #000112;
+  --black-800: #20212c;
+  --black-700: #2b2c37;
+  --black-600: #3e3f4e;
+  --gray-900: #828fa3;
+  --gray-800: #e4ebfa;
+  --gray-700: #f4f7fd;
+  --white: #ffffff;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+  /* Body Text */
+  .text-medium {
+    @apply font-medium text-[0.8125rem] leading-[23px];
+  }
 
-* {
-  box-sizing: border-box;
+  .text-bold {
+    @apply font-bold text-xs leading-[15.12px];
+  }
+
+  /* Heading Styles */
+  .heading-sm {
+    @apply font-bold text-xs leading-[15.12px] tracking-[2.4px];
+  }
+
+  .heading-md {
+    @apply font-bold text-[0.9375rem] leading-[18.9px];
+  }
+
+  .heading-lg {
+    @apply font-bold text-[1.125rem] leading-[22.68px];
+  }
+
+  .heading-xl {
+    @apply font-bold text-[1.5rem] leading-[30.24px];
+  }
 }
